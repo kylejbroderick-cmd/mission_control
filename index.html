@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red221\green221\blue225;\red23\green24\blue30;}
+{\*\expandedcolortbl;;\cssrgb\c89412\c89412\c90588;\cssrgb\c11765\c12549\c15686;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>KDP Mission Control \uc0\u55358 \u56734 </title>\
+    <!-- Marked.js for Markdown rendering -->\
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>\
+    <style>\
+        :root \{\
+            --bg-color: #0d1117;\
+            --text-color: #c9d1d9;\
+            --accent-color: #ff6b35; /* Lobster Orange */\
+            --accent-hover: #ff8c61;\
+            --card-bg: #161b22;\
+            --border-color: #30363d;\
+            --header-height: 60px;\
+        \}\
+\
+        body \{\
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;\
+            background-color: var(--bg-color);\
+            color: var(--text-color);\
+            margin: 0;\
+            padding: 0;\
+            line-height: 1.6;\
+            padding-bottom: 50px;\
+        \}\
+\
+        header \{\
+            background-color: var(--card-bg);\
+            border-bottom: 1px solid var(--border-color);\
+            height: var(--header-height);\
+            display: flex;\
+            align-items: center;\
+            padding: 0 20px;\
+            position: sticky;\
+            top: 0;\
+            z-index: 100;\
+        \}\
+\
+        h1 \{\
+            font-size: 1.2rem;\
+            margin: 0;\
+            color: var(--accent-color);\
+            display: flex;\
+            align-items: center;\
+            gap: 10px;\
+        \}\
+\
+        nav \{\
+            margin-left: auto;\
+            display: flex;\
+            gap: 15px;\
+        \}\
+\
+        nav button \{\
+            background: none;\
+            border: none;\
+            color: var(--text-color);\
+            font-size: 1rem;\
+            cursor: pointer;\
+            padding: 5px 10px;\
+            border-radius: 6px;\
+            transition: all 0.2s;\
+        \}\
+\
+        nav button:hover, nav button.active \{\
+            color: white;\
+            background-color: var(--border-color);\
+        \}\
+\
+        nav button.active \{\
+            border-bottom: 2px solid var(--accent-color);\
+        \}\
+\
+        main \{\
+            max-width: 900px;\
+            margin: 30px auto;\
+            padding: 0 20px;\
+        \}\
+\
+        /* Content Styling */\
+        .content-section \{\
+            display: none;\
+            animation: fadeIn 0.3s ease;\
+        \}\
+\
+        .content-section.active \{\
+            display: block;\
+        \}\
+\
+        @keyframes fadeIn \{\
+            from \{ opacity: 0; transform: translateY(5px); \}\
+            to \{ opacity: 1; transform: translateY(0); \}\
+        \}\
+\
+        .edit-btn \{\
+            display: inline-block;\
+            margin-bottom: 20px;\
+            padding: 8px 16px;\
+            background-color: var(--border-color);\
+            color: var(--accent-color);\
+            text-decoration: none;\
+            border-radius: 6px;\
+            font-size: 0.9rem;\
+            font-weight: bold;\
+        \}\
+        \
+        .edit-btn:hover \{\
+            background-color: #30363d;\
+            color: var(--accent-hover);\
+        \}\
+\
+        /* Markdown Content Overrides */\
+        h1, h2, h3 \{ color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.3em; \}\
+        h1 \{ font-size: 2em; border-bottom: none; \}\
+        a \{ color: var(--accent-color); text-decoration: none; \}\
+        a:hover \{ text-decoration: underline; \}\
+        table \{ width: 100%; border-collapse: collapse; margin: 20px 0; \}\
+        th, td \{ border: 1px solid var(--border-color); padding: 10px; text-align: left; \}\
+        th \{ background-color: var(--card-bg); \}\
+        blockquote \{ border-left: 4px solid var(--accent-color); margin: 0; padding-left: 15px; color: #8b949e; \}\
+        code \{ background-color: rgba(110, 118, 129, 0.4); padding: 0.2em 0.4em; border-radius: 6px; font-family: monospace; \}\
+        ul \{ padding-left: 20px; \}\
+        li \{ margin-bottom: 5px; \}\
+\
+        /* Status Pills (custom logic in JS could enhance this, but CSS handles standard lists) */\
+        li:contains("DONE") \{ color: #56d364; \} /* CSS :contains doesn't exist, just an idea for future */\
+\
+    </style>\
+</head>\
+<body>\
+\
+<header>\
+    <h1>\uc0\u55358 \u56734  Mission Control</h1>\
+    <nav>\
+        <button onclick="showSection('overview')" class="active">Overview</button>\
+        <button onclick="showSection('briefing')">Daily Brief</button>\
+        <button onclick="showSection('projects')">KDP Projects</button>\
+        <button onclick="showSection('memory')">Memory</button>\
+    </nav>\
+</header>\
+\
+<main id="app">\
+    <!-- Sections will be injected here -->\
+    <div id="overview" class="content-section active">Loading...</div>\
+    <div id="briefing" class="content-section">Loading...</div>\
+    <div id="projects" class="content-section">Loading...</div>\
+    <div id="memory" class="content-section">Loading...</div>\
+</main>\
+\
+<script>\
+    // Configuration: Replace with your repo details after creating\
+    // Example: 'kylebroderick/mission-control'\
+    // For local testing, we fetch relative paths.\
+    // For GitHub Pages, relative paths work perfectly.\
+    \
+    // Automatic repo detection for "Edit" links\
+    const repoUrl = window.location.hostname.includes('github.io') \
+        ? `https://github.com/$\{window.location.hostname.split('.')[0]\}/$\{window.location.pathname.split('/')[1] || ''\}`\
+        : '#'; \
+\
+    async function loadMarkdown(file, elementId) \{\
+        try \{\
+            const response = await fetch(file + '?t=' + new Date().getTime()); // prevent caching\
+            if (!response.ok) throw new Error("File not found");\
+            const text = await response.text();\
+            \
+            const editLink = repoUrl !== '#' \
+                ? `<a href="$\{repoUrl\}/edit/main/$\{file\}" target="_blank" class="edit-btn">\uc0\u9999 \u65039  Edit $\{file\}</a>` \
+                : '';\
+\
+            document.getElementById(elementId).innerHTML = editLink + marked.parse(text);\
+        \} catch (e) \{\
+            document.getElementById(elementId).innerHTML = `<p style="color:red">Error loading $\{file\}: $\{e.message\}</p>`;\
+        \}\
+    \}\
+\
+    function showSection(id) \{\
+        // Update tabs\
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));\
+        document.querySelector(`button[onclick="showSection('$\{id\}')"]`).classList.add('active');\
+\
+        // Update content\
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));\
+        document.getElementById(id).classList.add('active');\
+    \}\
+\
+    // Initial Load\
+    window.addEventListener('DOMContentLoaded', () => \{\
+        loadMarkdown('OVERVIEW.md', 'overview');\
+        loadMarkdown('DAILY_MISSION_BRIEFING.md', 'briefing');\
+        loadMarkdown('KDP_PROJECTS.md', 'projects');\
+        loadMarkdown('MEMORY_SUMMARY.md', 'memory');\
+    \});\
+</script>\
+\
+</body>\
+</html>
+\f1\fs28 \
+}
