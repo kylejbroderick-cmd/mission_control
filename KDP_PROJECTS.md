@@ -1,39 +1,9 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f1\fmodern\fcharset0 Courier;}
-{\colortbl;\red255\green255\blue255;\red221\green221\blue225;\red23\green24\blue30;}
-{\*\expandedcolortbl;;\cssrgb\c89412\c89412\c90588;\cssrgb\c11765\c12549\c15686;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
-
-\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 # KDP Projects Log\
-\
-## \uc0\u55357 \u56538  Active Pipeline\
-\
-### 1. Title: AI-Powered Trail Running Toolkit\
-- **Niche:** Fitness / AI productivity\
-- **Status:** \uc0\u55357 \u57313  **Idea / Outlining**\
-- **Sales Target:** $2,000/mo\
-- **Concept:** Quick-start guide for runners to use generic AI tools for customized plans and recovery.\
-- **AI Team:**\
-  - Researcher: [Pending]\
-  - Outliner: [Pending]\
-- **Next Action:** Create 1-page outline.\
-\
----\
-\
-### 2. Title: The "Anti-Sales" Guide to Financial Freedom\
-- **Niche:** Business / Entrepreneurship\
-- **Status:** \uc0\u55357 \u56629  **Brainstorming**\
-- **Sales Target:** $5,000/mo\
-- **Concept:** How to escape the AE grind using automation and side-hustles.\
-- **Next Action:** Research competitive titles on Amazon.\
-\
----\
-\
-## \uc0\u55358 \u56778  Backlog / Ideas\
-- **Idea:** "Cooking with Algorithms" - Meal prep optimization\
-- **Idea:** Children's book about a robot dog (Lucy & Honey style)
-\f1\fs28 \
-}
+KDP Projects Log
+📚 Active Pipeline
+1. Title: AI-Powered Trail Running Toolkit
+Niche: Fitness / AI productivity
+Status: 🟡 Idea / Outlining
+Sales Target: $2,000/mo
+Concept: Quick-start guide for runners using AI tools for training and recovery
+AI Team: Researcher, Outliner
+Next Action: Create 1-page outline
